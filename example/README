@@ -1,0 +1,50 @@
+Bradys Hot Springs Test
+=======================
+
+PyWCC can be tested on the included Bradys Hot Springs geothermal field test 
+dataset. This data is a subset of the data available from the Lawrence Berkeley 
+National Laboratory Induced Seismicity Data Website. 30 days of continuous data is 
+included in the example/ContinuousData directory, sorted by days. Template event 
+waveform data is included in the example/TemplateData directory, sorted by event. 
+Template events were identified from the original catalog event and only include 
+those with good signal-to-noise ratio in the frequency band of interest. A catalog 
+of the template events is included in file example/TemplateCatalog. An example input
+file is included in the file example/InputFile.
+
+
+Bradys Usage
+=============
+
+Once dependencies are installed and PyWCC is downloaded, the PyWCC Bradys test case 
+example can also be run from the command line within the example directory: 
+
+>> /anaconda/bin/python ../PyWCC/WaveformCC.py ./InputFile
+
+or from a Matlab prompt within the example directory:
+
+>> [status,out] = system(‘/anaconda/bin/python ../PyWCC/WaveformCC.py ./InputFile’)
+
+where a status of zero indicates that the command has completed successfully and
+the out variable contains any status messages printed to screen.
+
+
+Bradys Output
+=============
+
+Using the input parameters in the included InputFile, output detection files
+for days 07 April 2014 to 09 April 2014 are included in the OutputFiles
+directory. No other detections were identified outside of this swarm using the
+InputFile parameters on the remaining days in the example/ContinuousData data.
+Events in the output files include self-identification of the template events,
+template events identifying non-template original catalog events, and templates
+identifying new events that were excluded/missed from the original catalog. Waveforms 
+and spectrograms of all detections (plotted using an external program) are included
+in the Misc directory for user verification and convenience.
+
+
+Acknowledgments
+===============
+
+Waveform data, metadata, or data products for this study were accessed through the 
+Induced Seismicity Data Website at the Lawrence Berkeley National Laboratory which is 
+supported by the U.S. DOE Office of Geothermal Technology.
