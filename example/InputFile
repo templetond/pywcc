@@ -1,0 +1,13 @@
+pre_ot       0
+post_ot      8
+bp_low       5
+bp_high      10
+dec          5
+cc_thr       0.5
+sta_l        BT01 BT02 BT03 BT04 BT05
+comp_l       HHZ HHE HHN
+data_dir     ./ContinuousData/2014/20140407
+out_dir      ./OutputFiles
+templ_dir    ./TemplateData
+templ_file   ./TemplateCatalog
+verbose      True
