@@ -42,41 +42,41 @@ I/O Files
 =========
 
 Format of InputFile:
-pre_ot     Seconds prior to template zero-time (origin-time) to include in template
-post_ot    Seconds following template zero-time (origin-time) to include in template
-bp_low     Bandpass filter low corner
-bp_high    Bandpass filter high corner
-dec        Decimation factor for sample rate. Only integer decimation factor allowed.
-cc_thr     Absolute cross-Correlation threshold
-sta_l      List of stations to include in analysis, separated by a space
-comp_l     List of components to include in analysis, separated by a space
-data_dir   Path to continuous seismic data directory. Default=‘./ContinuousData’
-out_dir    Path to output directory. Default=‘./OutputFiles’
-temp_dir   Template catalog file, inclusive of PATH. Default=‘./TemplateCatalog’
-templ_file Path to template data directory. Default=‘./TemplateData’
-verbose    Verbose option True/[False]. If True will output raw data file as well
+* pre_ot     Seconds prior to template zero-time (origin-time) to include in template
+* post_ot    Seconds following template zero-time (origin-time) to include in template
+* bp_low     Bandpass filter low corner
+* bp_high    Bandpass filter high corner
+* dec        Decimation factor for sample rate. Only integer decimation factor allowed.
+* cc_thr     Absolute cross-Correlation threshold
+* sta_l      List of stations to include in analysis, separated by a space
+* comp_l     List of components to include in analysis, separated by a space
+* data_dir   Path to continuous seismic data directory. Default=‘./ContinuousData’
+* out_dir    Path to output directory. Default=‘./OutputFiles’
+* temp_dir   Template catalog file, inclusive of PATH. Default=‘./TemplateCatalog’
+* templ_file Path to template data directory. Default=‘./TemplateData’
+* verbose    Verbose option True/[False]. If True will output raw data file as well
            as final data file and will also print status messages to screen.
 
 Template catalog file has form:
 TEMPLATE_NAME YYYY/MM/DD HH:MM:SS.MMM LAT LON DEPTH
-YYYY year
-MM month
-DD day
-HH hour
-MM minute
-SS seconds
-MMM decimal seconds
-LAT latitude of template event
-LON longitude of template event
-DEPTH depth of template event 
+* YYYY year
+* MM month
+* DD day
+* HH hour
+* MM minute
+* SS seconds
+* MMM decimal seconds
+* LAT latitude of template event
+* LON longitude of template event
+* DEPTH depth of template event 
 
 PyWCC output catalog file has form:
 YYYY/MM/DD HH:MM:SS.MMMMMM LAT LON DEPTH CC DET
-LAT latitude of the template DET, taken from the Template Catalog
-LON longitude of the template DET, taken from the Template Catalog
-DEPTH depth of the template DET, taken from the Template Catalog
-CC cross-correlation coefficient between the template DET and the new detection
-DET template with the highest correlation.
+* LAT latitude of the template DET, taken from the Template Catalog
+* LON longitude of the template DET, taken from the Template Catalog
+* DEPTH depth of the template DET, taken from the Template Catalog
+* CC cross-correlation coefficient between the template DET and the new detection
+* DET template with the highest correlation.
 
 Raw template waveform data should include data before and after the template start
 and end times to accommodate possible filter effects. The template waveform data 
