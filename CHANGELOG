@@ -1,0 +1,9 @@
+0.1.1:
+- waveform_cc:
+  * modified continuous data input call 
+  * added support for multiple data directories in InputFile (recursive)
+  * output file format changed
+
+
+0.1.0:
+ - initial release
