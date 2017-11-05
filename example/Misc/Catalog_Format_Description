@@ -1,0 +1,26 @@
+FORMAT OF THE OUTPUT CATALOG LISTINGS - 02NOV2017
+
+COL   LEN    FORMAT   NAME    COMMENT
+  1    10      a10    date    YYYY/MM/DD
+ 12    12      a12    time    HH:mm:SS.SSS UTC time
+ 25     8     f8.4    lat     latitude decimal degrees
+ 34     9     f9.4    lon     longitude decimal degrees
+ 44     6     f6.3    depth   kilometers
+ 51     4     f4.2    mag     magnitude
+ 57     3       i3    npp     number of picked phases
+ 61     6     f6.3    rms     rms residual
+ 68     6     f6.3    xerr    est. error (km) in x direction
+ 75     6     f6.3    yerr    est. error (km) in y direction
+ 82     6     f6.3    zerr    est. error (km) in z direction
+ 89    12      a12    eid     event ID 
+102     1       a1    m       magnitude type: 'w' moment magnitude
+                                              'd' coda duration magnitude
+104     1       a1    l       location type:  '1' simulcr relocated
+                                              '2' estimated from template matching
+106    10      a10    notes   detector number and cc value from template matching
+
+
+EXAMPLE CATALOG LISTING:
+DATE       TIME         LAT      LON       DEPTH  MAG   NPP RMS    XERR   YERR   ZERR   EID          M L NOTES
+2010/12/21 03:01:01.889  39.7986 -118.9947 -0.113 -0.20 012  0.039  0.077  0.150  0.359 10122103010  w 1
+2014/04/09 01:27:55.070  39.7922 -119.0152 -0.200                                                      2 det427:0.75
