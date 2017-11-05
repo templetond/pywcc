@@ -3,13 +3,13 @@ Bradys Hot Springs Test
 
 PyWCC can be tested on the included Bradys Hot Springs geothermal field test 
 dataset. This data is a subset of the data available from the Lawrence Berkeley 
-National Laboratory Induced Seismicity Data Website. 30 days of continuous data is 
-included in the example/ContinuousData directory, sorted by days. Template event 
-waveform data is included in the example/TemplateData directory, sorted by event. 
-Template events were identified from the original catalog event and only include 
-those with good signal-to-noise ratio in the frequency band of interest. A catalog 
-of the template events is included in file example/TemplateCatalog. An example input
-file is included in the file example/InputFile.
+National Laboratory Induced Seismicity Data Website. Continuous data is included 
+in the example/ContinuousData directory, sorted by days. Template event waveform 
+data is included in the example/TemplateData directory, sorted by event. Template 
+events were identified from the original catalog event and only include those with 
+good signal-to-noise ratio in the frequency band of interest. A catalog of the 
+template events is included in file example/TemplateCatalog. An example input file 
+is included in the file example/InputFile.
 
 
 Bradys Usage
@@ -18,11 +18,11 @@ Bradys Usage
 Once dependencies are installed and PyWCC is downloaded, the PyWCC Bradys test case 
 example can also be run from the command line within the example directory: 
 
->> /anaconda/bin/python ../PyWCC/WaveformCC.py ./InputFile
+>> /anaconda/bin/python ../pywcc/waveform_cc.py ./InputFile
 
 or from a Matlab prompt within the example directory:
 
->> [status,out] = system(‘/anaconda/bin/python ../PyWCC/WaveformCC.py ./InputFile’)
+>> [status,out] = system(‘/anaconda/bin/python ../pywcc/waveform_cc.py ./InputFile’)
 
 where a status of zero indicates that the command has completed successfully and
 the out variable contains any status messages printed to screen.
